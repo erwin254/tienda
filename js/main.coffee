@@ -15,21 +15,40 @@ class PersonView extends Backbone.View
 	chao: ->
 		console.log "adios"
 
-person = new Person name: "erwin"
+#person = new Person name: "erwin"
 
 
-personView = new PersonView model: person
+#personView = new PersonView model: person
 
-person.trigger 'hola'
+#person.trigger 'hola'
 
-console.log person.toJSON()
+#console.log person.toJSON()
 
-bear1 = new Bear name: "pedro"
-bear2 = new Bear name: "pablo"
-bear3 = new Bear name: "andres"
+#bear1 = new Bear name: "pedro"
+#bear2 = new Bear name: "pablo"
+#bear3 = new Bear name: "andres"
+#bears = new Bears ([bear1, bear2, bear3])
 
-bears = new Bears ([bear1, bear2, bear3])
+#bears = new Bears
+#bears.fetch()
 
+##init  = new MainView model : bear1
+#bear1.trigger 'initialize'
+class ListView extends Backbone.View 
+	el: $ 'body'
 
+	initialize: ->
+		@collection = new Bears
+		@collection.fetch()
+		@render()
+	
+	render: ->
+		$(@el).append '<button>holaa</button>'
+	
+	showItems: ->
+		for bear in @collection.toJSON()
+			$(@el).append "<li>#{bear.name} #{bear.occupation}</li>"		
+	
+	events: 'click button' : 'showItems'
 
-console.log bears.toJSON()
+list_view = new ListView 

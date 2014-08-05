@@ -13,6 +13,7 @@ router = express.Router()
 
 router.use((req, res, next)->
 	console.log "asdasd2"
+	res.setHeader('Access-Control-Allow-Origin', 'http://tienda.mk');
 	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
 	next())
 
