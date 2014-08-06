@@ -34,21 +34,6 @@ class PersonView extends Backbone.View
 
 ##init  = new MainView model : bear1
 #bear1.trigger 'initialize'
-class ListView extends Backbone.View 
-	el: $ 'body'
 
-	initialize: ->
-		@collection = new Bears
-		@collection.fetch()
-		@render()
-	
-	render: ->
-		$(@el).append '<button>holaa</button>'
-	
-	showItems: ->
-		for bear in @collection.toJSON()
-			$(@el).append "<li>#{bear.name} #{bear.occupation}</li>"		
-	
-	events: 'click button' : 'showItems'
 
-list_view = new ListView 
+product_view = new ProductView
