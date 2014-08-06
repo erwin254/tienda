@@ -15,11 +15,11 @@ Instalación de Tienda en localhost Debian
 * sudo nano tienda.mk
 * modificar para que quede de esta manera
 
-'<VirtualHost *:80>''
-        'ServerAdmin webmaster@localhost'
-        'ServerName tienda.mk'
-        'ServerAlias tienda.mk'
-        'DocumentRoot /var/www/tienda/public'
+`<VirtualHost *:80>`
+        `ServerAdmin webmaster@localhost`
+        `ServerName tienda.mk`
+        `ServerAlias tienda.mk`
+        `DocumentRoot /var/www/tienda/public`
 
 **4.	modificar hosts.**
 
