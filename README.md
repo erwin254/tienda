@@ -7,9 +7,9 @@ Instalación de Tienda en localhost Debian
 
 **1.    clonar el proyecto (el repositorio) en /var/www/.**
 
-**2.	Instalación de Node.js y npm mongodb **
+**2.	Instalación de Node.js y npm mongodb .**
 
-**3.	crear archivo tienda.mk
+**3.	crear archivo tienda.mk.**
 * cd /etc/apache2/sites-available/
 * sudo cp default tienda.mk
 * sudo nano tienda.mk
@@ -21,15 +21,15 @@ Instalación de Tienda en localhost Debian
         'ServerAlias tienda.mk'
         'DocumentRoot /var/www/tienda/public'
 
-**4.	modificar hosts
+**4.	modificar hosts.**
 
 * sudo nano /etc/hosts
 * agregar 127.0.0.1  tienda.mk
 * correr sudo a2ensite tienda.mk
 * reiniciar servidor apache sudo service apache2 restart
 
-**5. instalar dependencias
+**5. instalar dependencias.**
 * en /www/tienda/ correr npm install
 
 
-**6. correr el servidor node localizado en tienda/server/server.js y Enjoy!
+**6. correr el servidor node localizado en tienda/server/server.js y Enjoy!.**
